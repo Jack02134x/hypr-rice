@@ -1,0 +1,34 @@
+#!/bin/bash
+
+usage() {
+    echo "Usage: $0 [audio|video|stream] <YouTube URL>"
+    echo "Options:"
+    echo "  audio   - Download the best audio format"
+    echo "  video   - Download the best video format"
+    echo "  stream  - Stream the video online"
+    exit 1
+}
+
+option=$1
+url=$2
+
+download_path="~/Downloads/youtubeshit/"
+
+case "$option" in
+    audio)
+        echo "Downloading best audio from $url..."
+        yt-dlp -f bestaudio -x --audio-format mp3 -o "$download_path/%(title)s.%(ext)s" "$url"
+        ;;
+    video)
+        echo "Downloading best video from $url..."
+        yt-dlp -f bestvideo+bestaudio --merge-output-format mp4 -o "$download_path/%(title)s.%(ext)s" "$url"
+        ;;
+    stream)
+        echo "Streaming $url..."
+        mpv "$url"
+        ;;
+    *)
+        echo "Invalid option: $option"
+        usage
+        ;;
+esac

@@ -1,0 +1,51 @@
+windowrulev2 = animation slide, class:^(wofi)$
+
+############### wofi things #############
+
+windowrulev2 = noborder, class:^(wofi)$
+windowrulev2 = noshadow,class:^(wofi)$
+windowrulev2 = move 1315 70, class:^(wofi)$, title:^(clippick)$
+
+############# idk ################
+windowrulev2 = opacity 0.9 override 0.9 override, class:^(Google-chrome)$
+windowrulev2 = opacity 0.9 override 0.9 override, class:^(firefox)$
+windowrulev2 = tile, class:^(Chromium)$ initialTitle:^(twitch.tv_/)$
+windowrulev2 = tile, class:^(Chromium)$ initialTitle:^(web.whatsapp.com_/)$
+windowrulev2 = tile, initialTitle:^(Godot)$
+windowrulev2 = float, class:^(waypaper)$
+windowrulev2 = tile, class:^(aseprite.exe)$
+
+
+############### mpv ######################
+windowrulev2 = opacity 1 override 1 override, class:^(mpv)$
+windowrulev2 = noblur, class:^(mpv)$
+windowrulev2 = nodim, class:^(mpv)$
+
+############### zathura ##############
+windowrulev2 = noblur, class:^(org.pwmt.zathura)$
+windowrulev2 = nodim, class:^(org.pwmt.zathura)$
+windowrulev2 = opacity 0.8 override 0.8 override, class:^(org.pwmt.zathura)$
+
+################ my visual shit yeah foot ##################
+# windowrulev2 = noshadow,class:^(foot)$
+# windowrulev2 = noblur, class:^(foot)$
+# windowrulev2 = nodim, class:^(foot)$
+# windowrulev2 = noshadow,class:^(foot)$
+# windowrulev2 = noborder, class:^(foot)$
+# windowrulev2 = nofocus, class:^(foot)$
+# windowrulev2 = float, class:^(foot)$
+# windowrulev2 = size 1920 1080, class:^(foot)$
+# windowrulev2 = opacity 0.2 override 0.2 override, class:^(foot)$
+# windowrulev2 = pin, class:^(foot)$
+
+################### kitty ########################
+windowrulev2 = noshadow,class:^(kitty)$
+#windowrulev2 = noblur, class:^(kitty)$
+#windowrulev2 = nodim, class:^(kitty)$
+windowrulev2 = opacity 1.0 override 1.0 override, class:^(kitty)$
+
+################ some annoying shit ################
+windowrulev2 = noblur, class:^(Xdg-desktop-portal-gtk),title:^(Open Folder)
+windowrule = noblur,class:^()$,title:^()$
+windowrule = opacity 1.0 override 1.0 override, class:^()$,title:^()$
+windowrule = opacity 1.0 override 1.0 override, class:^(steam)$,title:^()$

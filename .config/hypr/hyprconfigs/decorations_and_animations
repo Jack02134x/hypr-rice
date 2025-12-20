@@ -1,0 +1,74 @@
+general {
+    allow_tearing = true
+    gaps_in = 10
+    gaps_out = 10
+    border_size = 4
+    col.active_border = $primary_container $outline 45deg
+    col.inactive_border = $background $outline 45deg
+    col.nogroup_border = 0xff89dceb1
+    col.nogroup_border_active = 0xfff9e2af
+    resize_on_border = true
+    allow_tearing = true
+}
+
+decoration {
+    rounding = 20
+    active_opacity = 0.9
+    inactive_opacity = 0.8
+    fullscreen_opacity = 1.0
+
+
+    dim_inactive = true
+    dim_strength = 0.3
+
+    blur {
+        enabled = true
+        size = 2
+        passes = 3
+        new_optimizations = true
+        xray = true
+        ignore_opacity = false
+    }
+
+    shadow {
+        enabled = true
+        range = 4
+        render_power = 3
+        color = $secondary_fixed_dim
+    }
+}
+
+
+animations {
+    enabled = yes, please :)
+
+    # Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
+
+    bezier = easeOutQuint,0.23,1,0.32,1
+    bezier = easeInOutCubic,0.65,0.05,0.36,1
+    bezier = easeInOutCirc, 0.85, 0, 0.15, 1
+    bezier = easeOutCirc, 0, 0.55, 0.45, 1
+    bezier = easeOutExpo, 0.16, 1, 0.3, 1
+    bezier = linear,0,0,1,1
+    bezier = almostLinear,0.5,0.5,0.75,1.0
+    bezier = quick,0.15,0,0.1,1
+    bezier = shot, 0.2, 1.0, 0.2, 1.0
+    bezier = swipe, 0.6, 0.0, 0.2, 1.05
+    bezier = linear, 0.0, 0.0, 1.0, 1.0
+    bezier = progressive, 1.0, 0.0, 0.6, 1.0
+    bezier = linear, 0, 0, 1, 1
+    bezier = md3_standard, 0.2, 0, 0, 1
+    bezier = md3_decel, 0.05, 0.7, 0.1, 1
+    bezier = md3_accel, 0.3, 0, 0.8, 0.15
+    bezier = overshot, 0.05, 0.9, 0.1, 1.1
+    bezier = crazyshot, 0.1, 1.5, 0.76, 0.92
+    bezier = hyprnostretch, 0.05, 0.9, 0.1, 1.0
+    bezier = fluent_decel, 0.1, 1, 0, 1
+
+
+    animation = windows, 1, 3, md3_standard, popin 60%
+    animation = border, 1, 10, default
+    animation = fade, 1, 2.5, md3_decel
+    animation = workspaces, 1, 3.5, overshot, slide
+    animation = specialWorkspace, 1, 3, md3_decel, slidevert
+}

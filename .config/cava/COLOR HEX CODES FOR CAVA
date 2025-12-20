@@ -1,0 +1,82 @@
+# Orange Red Pink
+gradient_color_1 = '#A01400'
+gradient_color_2 = '#BC4400'
+gradient_color_3 = '#C34600'
+gradient_color_4 = '#F85706'
+gradient_color_5 = '#F85706'
+gradient_color_6 = '#A01400'
+gradient_color_7 = '#A01400'
+gradient_color_8 = '#A01400'
+
+# Red Orange Red White
+gradient_color_1 = '#A01400'
+gradient_color_2 = '#BC4400'
+gradient_color_3 = '#C34600'
+gradient_color_4 = '#F85706'
+gradient_color_5 = '#F85706'
+gradient_color_6 = '#F85706'
+gradient_color_7 = '#BC4400'
+gradient_color_8 = '#CCCCCC'
+
+# REd Orange Red
+gradient_color_1 = '#A01400'
+gradient_color_2 = '#BC4400'
+gradient_color_3 = '#C34600'
+gradient_color_4 = '#F85706'
+gradient_color_5 = '#F85706'
+gradient_color_6 = '#F85706'
+gradient_color_7 = '#A01400'
+gradient_color_8 = '#A01400'
+
+# Purple Orange Yellow
+gradient_color_1 = '#B919E5'
+gradient_color_2 = '#E519AC'
+gradient_color_3 = '#E51946'
+gradient_color_4 = '#E51946'
+gradient_color_5 = '#E55319'
+gradient_color_6 = '#E5B919'
+gradient_color_7 = '#ACE519'
+gradient_color_8 = '#ACE519'
+
+
+# Blue Green
+gradient_color_1 = '#111F97'
+gradient_color_2 = '#461197'
+gradient_color_3 = '#116297'
+gradient_color_4 = '#119789'
+gradient_color_5 = '#119789'
+gradient_color_6 = '#119746'
+gradient_color_7 = '#1F9711'
+gradient_color_8 = '#1F9711'
+
+# Green REd
+gradient_color_1 = '#119756'
+gradient_color_2 = '#119756'
+gradient_color_3 = '#969711'
+gradient_color_4 = '#969711'
+gradient_color_5 = '#969711'
+gradient_color_6 = '#975611'
+gradient_color_7 = '#971211'
+gradient_color_8 = '#971211'
+
+
+# Purple to Light
+gradient_color_1 = '#fe18e5'
+gradient_color_2 = '#C9A8CF'
+gradient_color_3 = '#DEB2DA'
+gradient_color_4 = '#AE8CAA'
+gradient_color_5 = '#AE8CAA'
+gradient_color_6 = '#DEB2DA'
+gradient_color_7 = '#CFA8BC'
+gradient_color_8 = '#F8CFFF'
+
+
+# Purple Red
+gradient_color_1 = '#851197'
+gradient_color_2 = '#971188'
+gradient_color_3 = '#971188'
+gradient_color_4 = '#971167'
+gradient_color_5 = '#971145'
+gradient_color_6 = '#971123'
+gradient_color_7 = '#971123'
+gradient_color_8 = '#972011'

@@ -1,0 +1,32 @@
+
+[Default Applications]
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+
+# Images
+image/jpeg=feh.desktop
+image/png=feh.desktop
+image/webp=feh.desktop
+image/gif=feh.desktop
+image/svg+xml=feh.desktop
+
+# PDFs
+application/pdf=org.pwmt.zathura.desktop
+
+# Code editor
+text/x-csrc=zeditor.desktop
+text/x-c++src=zeditor.desktop
+text/javascript=zeditor.desktop
+text/css=zeditor.desktop
+text/x-python=zeditor.desktop
+text/markdown=zeditor.desktop
+inode/directory=zeditor.desktop
+
+# Text editor
+text/plain=mousepad.desktop
+x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop
+x-scheme-handler/magnet=freedownloadmanager_magnet_up.desktop
+application/x-bittorrent=freedownloadmanager_torrent.desktop

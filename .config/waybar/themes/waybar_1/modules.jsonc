@@ -1,0 +1,236 @@
+//  __  __           _       _            
+// |  \/  | ___   __| |_   _| | ___  ___  
+// | |\/| |/ _ \ / _` | | | | |/ _ \/ __| 
+// | |  | | (_) | (_| | |_| | |  __/\__ \ 
+// |_|  |_|\___/ \__,_|\__,_|_|\___||___/ 
+//                                        
+//  
+// by Frogprog (2025) 
+// ----------------------------------------------------- 
+
+//Battery moudle
+{
+  "battery": {
+    "interval":30,
+    "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 20
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂄",
+    "format-plugged": "{capacity}% 󰂄 ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰁻","󰁼","󰁾","󰂀","󰂂","󰁹"],
+  },
+
+// Language moudle
+
+  "hyprland/language": {
+    "format-en": "En",
+    "format-ru": "Ru",
+  },
+
+// Hyrland workspaces moudle
+
+"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active": "",
+			"default": "",
+      "empty": "",
+    },
+    "persistent-workspaces": {
+      "eDP-1": [1, 2, 3, 4, 5]
+    }
+  },
+
+  // network module
+
+  "network": {
+    "format-wifi": "",
+    "format-ethernet":"",
+    "format-disconnected": "",
+    "tooltip-format-disconnected": "Error",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} 🖧 ",
+    "on-click": "kitty nmtui"
+  },
+
+  // clock module
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M:%OS}  ",
+    "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode"          : "year",
+      "mode-mon-col"  : 3,
+      "weeks-pos"     : "right",
+      "on-scroll"     : 1,
+      "format": {
+        "months":     "<span color='#ffead3'><b>{}</b></span>",
+        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+        "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions":  {
+      "on-click-right": "mode",
+      "on-scroll-up": "tz_up",
+      "on-scroll-down": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+
+  //brightness module
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""]
+  },
+
+  // bluetooth module
+
+  "bluetooth": {
+    "format-on": "󰂯",
+    "format-off": "BT-off",
+    "format-disabled": "󰂲",
+    "format-connected-battery": "{device_battery_percentage}% 󰂯",
+    "format-alt": "{device_alias} 󰂯",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+    "on-click-right": "blueman-manager",
+  },
+
+  // tray module
+
+   "tray": {
+    "icon-size": 14,
+    "spacing": 10
+  },
+  
+  // volume module
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+  },
+
+  // separator betweeen different modules
+
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+
+  // app launcher
+
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "rofi -show drun",
+    "tooltip": "false",
+  },
+
+  // colorpicker module
+
+  "custom/hyprpicker": {
+    "format": " ",
+    "on-click": "hyprpicker",
+    "tooltip": false
+  },
+
+  // modules right group
+  "group/system-stuff": {
+    "orientation": "horizontal",
+    "modules": [
+      "network", 
+      "custom/separator",
+      "bluetooth", 
+      "custom/separator",
+      "hyprland/language", 
+      "custom/separator",
+      "pulseaudio", 
+      "custom/separator",
+      "battery", 
+    ]
+  },
+
+  // modules left group
+
+  "group/info-stuff": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/launcher",
+      "custom/separator",
+      "clock",
+      "custom/separator",
+    ]
+  },
+
+  // expandor of additional group from left
+
+  "custom/expand": {
+    "format": " ",
+    "tooltip": false
+  },
+
+  // additional group from left
+
+  "group/expand": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 600,
+      "transition-to-right": true,
+      "click-to-reveal": true
+    },
+    "modules": [
+      "custom/expand", 
+      "custom/separator",
+      "custom/hyprpicker",
+      "custom/separator",
+      "cpu",
+      "custom/separator",
+      "memory",
+      "custom/separator",
+      "temperature",
+    ],
+  },
+
+  // hardware modules
+
+  "cpu": {
+    "format": "󰻠",
+    "tooltip": true
+  },
+  "memory": {
+    "format": ""
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "",
+  },
+}

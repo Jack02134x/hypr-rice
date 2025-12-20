@@ -1,0 +1,124 @@
+binds {
+        allow_workspace_cycles = true
+        # Mouse binds
+        bindm = $mainMod, mouse:272, movewindow
+        bindm = $mainMod, mouse:273, resizewindow
+
+        bind = $mainMod, mouse_down, workspace, e-1
+        bind = $mainMod, mouse_up, workspace, e+1
+
+        # Kitty binds
+        bind = $mainMod, Q, exec, $term
+
+        # Screenshot/scripts binds
+        bind = , Print, exec, pkill wofi;~/.scripts/screenshot.sh
+        bind = $mainMod, C, exec, pkill wofi; bash ~/.scripts/quick-settings.sh
+
+        # Application binds
+        bind = $mainMod, D, killactive,
+        bind = $mainMod_SHIFT, D, forcekillactive,
+        bind = $mainMod, E, exec, $explorer
+        bind = $mainMod_SHIFT, E, exec, thunar
+        bind = $mainMod, B, exec, firefox
+        bind = $mainMod_SHIFT, B, exec, $browser
+        bind = $mainMod_SHIFT, P, exec, pkill python; pkill mpv;  $wallpaper_command & python /home/jack/python-yt-project/play_entire_playlist.py;
+        bind = $mainMod, P, exec, pkill python ; pkill mpv; $wallpaper_command &
+
+        bind = $mainMod_SHIFT, A, exec, cd Videos/anime/; ani-cli -d --rofi
+        bind = $mainMod, A, exec, ani-cli --rofi
+
+
+        # Application Launcher and notification binds
+        bind = $mainMod, S, exec, rofi -show drun
+        bind = $mainMod, V, exec, pkill wofi; cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist decode | wl-copy
+        bind = $mainMod, N, exec, swaync-client -t -sw
+
+        # Other dispatchers
+        bind = ALT, Tab, cyclenext
+        bind = $mainMod, F, fullscreen,
+        bind = $mainMod_SHIFT, F, fullscreenstate, 3
+        bind = $mainMod, T, togglefloating,
+        bind = $mainMod_SHIFT, T, centerwindow
+        bind = $mainMod, G, togglegroup,
+        bind = $mainMod, tab, changegroupactive,
+        bind = $mainMod, J, togglesplit,
+
+        # Wlogout
+        bind = $mainMod, M, exec, pkill wlogout; wlogout
+        bind = $mainMod, L, exec, $screenlock
+
+        bind = $mainMod_SHIFT, W, exec, ~/.scripts/wallpaperchanger.sh
+    	bind = $mainMod, W, exec, pkill wofi; ~/.config/waybar/waybar-switcher/Menu.sh
+
+        # Move window with $mainMod + Shift + arrow keys
+        #      [↑]
+        # [←] [↓] [→]
+        bind = $mainMod_SHIFT, left, movewindow, l
+        bind = $mainMod_SHIFT, right, movewindow, r
+        bind = $mainMod_SHIFT, up, movewindow, u
+        bind = $mainMod_SHIFT, down, movewindow, d
+
+        # Move window focus with $mainMod + arrow keys
+        #     [↑]
+        # [←] [↓] [→]
+        bind = $mainMod, left, movefocus, l
+        bind = $mainMod, right, movefocus, r
+        bind = $mainMod, up, movefocus, u
+        bind = $mainMod, down, movefocus, d
+
+        # Move To a workspaces
+        bind = $mainMod, 1, exec, /home/jack/.scripts/go_through.sh 1
+        bind = $mainMod, 2, exec, /home/jack/.scripts/go_through.sh 2
+        bind = $mainMod, 3, exec, /home/jack/.scripts/go_through.sh 3
+        bind = $mainMod, 4, exec, /home/jack/.scripts/go_through.sh 4
+        bind = $mainMod, 5, exec, /home/jack/.scripts/go_through.sh 5
+        bind = $mainMod, 6, exec, /home/jack/.scripts/go_through.sh 6
+        bind = $mainMod, 7, workspace, 7
+        bind = $mainMod, 8, workspace, 8
+        bind = $mainMod, 9, workspace, 9
+        bind = $mainMod, 0, workspace, 10
+
+        #Move all winows between workspaces
+        bind = $mainMod_Alt, 1, exec, /home/jack/.scripts/moving_all_windows.sh 1 # Move all windows to workspace 1
+        bind = $mainMod_Alt, 2, exec, /home/jack/.scripts/moving_all_windows.sh 2 # Move all windows to workspace 2
+        bind = $mainMod_Alt, 3, exec, /home/jack/.scripts/moving_all_windows.sh 3 # Move all windows to workspace 3
+        bind = $mainMod_Alt, 4, exec, /home/jack/.scripts/moving_all_windows.sh 4 # Move all windows to workspace 4
+        bind = $mainMod_Alt, 5, exec, /home/jack/.scripts/moving_all_windows.sh 5 # Move all windows to workspace 5
+        bind = $mainMod_Alt, 6, exec, /home/jack/.scripts/moving_all_windows.sh 6 # Move all windows to workspace 6
+        bind = $mainMod_Alt, 7, exec, /home/jack/.scripts/moving_all_windows.sh 7 # Move all windows to workspace 7
+        bind = $mainMod_Alt, 8, exec, /home/jack/.scripts/moving_all_windows.sh 8 # Move all windows to workspace 8
+        bind = $mainMod_Alt, 9, exec, /home/jack/.scripts/moving_all_windows.sh 9 # Move all windows to workspace 9
+        bind = $mainMod_Alt, 0, exec, /home/jack/.scripts/moving_all_windows.sh 10 # Move all windows to workspace 10
+
+        # Move windows between workspaces
+        bind = $mainMod_SHIFT, 1, movetoworkspace, 1
+        bind = $mainMod_SHIFT, 2, movetoworkspace, 2
+        bind = $mainMod_SHIFT, 3, movetoworkspace, 3
+        bind = $mainMod_SHIFT, 4, movetoworkspace, 4
+        bind = $mainMod_SHIFT, 5, movetoworkspace, 5
+        bind = $mainMod_SHIFT, 6, movetoworkspace, 6
+        bind = $mainMod_SHIFT, 7, movetoworkspace, 7
+        bind = $mainMod_SHIFT, 8, movetoworkspace, 8
+        bind = $mainMod_SHIFT, 9, movetoworkspace, 9
+        bind = $mainMod_SHIFT, 0, movetoworkspace, 10
+
+
+        # Volume Control
+        bind =  ,XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +2%; pkill -RTMIN+8 waybar
+        bind =  ,XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -2%; pkill -RTMIN+8 waybar
+        bind = ,XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+8 waybar
+        # Brightness Control
+        binde = , XF86MonBrightnessUp, exec, brightnessctl set +5%
+        binde = , XF86MonBrightnessDown, exec, brightnessctl set 5%-
+
+}
+
+guestures {
+        gesture = 4, horizontal, workspace
+        gesture = 4, down, dispatcher, movetoworkspacesilent, special:minimize
+        gesture = 4, up, dispatcher, togglespecialworkspace, minimize
+        gesture = 3, up, move
+        gesture = 3, down, move
+        gesture = 3, left, move
+        gesture = 3, right, move
+}

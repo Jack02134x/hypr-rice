@@ -1,0 +1,78 @@
+sw_volume: 100
+audio_device_state:1:my_fifo
+audio_device_state:1:pulse audio
+state: stop
+current: 15
+random: 1
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+lastloadedplaylist: 
+playlist_begin
+0:Steven Universe songs/01 - We Are The Crystal Gems (feat. Zach Callison, Estelle, Deedee Magno Hall & Michaela Dietz)....mp3
+1:Steven Universe songs/02 - Let Me Drive My Van Into Your Heart (feat. Tom Scharpling).mp3
+2:Steven Universe songs/03 - Giant Woman (feat. Zach Callison).mp3
+3:Steven Universe songs/04 - Strong in the Real Way (feat. Zach Callison & Deedee Magno Hall).mp3
+4:Steven Universe songs/05 - Steven and the Stevens (feat. Zach Callison).mp3
+5:Steven Universe songs/06 - Big Fat Zucchini (feat. Zach Callison).mp3
+6:Steven Universe songs/07 - Steven and the Crystal Gems (feat. Zach Callison, Estelle, Deedee Magno Hall & Michaela Dietz).mp3
+7:Steven Universe songs/08 - Dear Old Dad (feat. Zach Callison & Tom Scharpling).mp3
+8:Steven Universe songs/09 - Be Wherever You Are (feat. Zach Callison).mp3
+9:Steven Universe songs/10 - On The Run (feat. Zach Callison & Michaela Dietz).mp3
+10:Steven Universe songs/11 - Comet (feat. Tom Scharpling).mp3
+11:Steven Universe songs/12 - Destiny (feat. Tom Scharpling).mp3
+12:Steven Universe songs/13 - Lapis Lazuli (feat. Zach Callison).mp3
+13:Steven Universe songs/14 - Wailing Stone (feat. Tom Scharpling).mp3
+14:Steven Universe songs/15 - Stronger Than You (feat. Estelle).mp3
+15:Steven Universe songs/16 - Full Disclosure (feat. Zach Callison).mp3
+16:Steven Universe songs/17 - We Are The Crystal Gems (feat. Zach Callison, Estelle, Deedee Magno Hall, Michaela Dietz & Tom....mp3
+17:Steven Universe songs/18 - The Jam Song (feat. Zach Callison & Grace Rolek).mp3
+18:Steven Universe songs/19 - Do It For Her (feat. Zach Callison & Grace Rolek).mp3
+19:Steven Universe songs/20 - What Can I Do (For You) (feat. Susan Egan & Tom Scharpling).mp3
+20:Steven Universe songs/21 - Tower of Mistakes (feat. Michaela Dietz).mp3
+21:Steven Universe songs/22 - Haven't You Noticed (I'm a Star) (feat. Olivia Olson).mp3
+22:Steven Universe songs/23 - Something Entirely New (feat. Erica Luttrell & Charlyne Yi).mp3
+23:Steven Universe songs/24 - Peace and Love on the Planet Earth (feat. Zach Callison, Estelle, Deedee Magno Hall, Michaela....mp3
+24:Steven Universe songs/25 - Don't Cost Nothing (feat. Tom Scharpling & Zach Callison).mp3
+25:Steven Universe songs/26 - Mr. Greg (feat. Tom Scharpling, Zach Callison, Deedee Magno Hall & Eric Bauza).mp3
+26:Steven Universe songs/27 - It's Over Isn't It (feat. Deedee Magno Hall).mp3
+27:Steven Universe songs/28 - Both of You (feat. Zach Callison, Tom Scharpling & Deedee Magno Hall).mp3
+28:Steven Universe songs/29 - Don't Cost Nothing (feat. Tom Scharpling, Zach Callison & Deedee Magno Hall) (Reprise).mp3
+29:Steven Universe songs/30 - I Think I Need a Little (Change) (feat. Tom Scharpling).mp3
+30:Steven Universe songs/31 - Here Comes a Thought (feat. Estelle & AJ Michalka).mp3
+31:Steven Universe songs/34 - Still Not Giving Up (feat. Zach Callison).mp3
+32:Steven Universe songs/35 - I Could Never Be (Ready) (feat. Tom Scharpling).mp3
+33:Steven Universe songs/36 - What's the Use of Feeling (Blue) ？ (feat. Patti LuPone & Deedee Magno Hall).mp3
+34:Steven Universe songs/37 - Love Like You (feat. Rebecca Sugar) (End Credits).mp3
+35:Steven Universe songs/38 - The Working Dead (feat. Kate Micucci).mp3
+36:Steven Universe songs/39 - Sadie Killer and the Suspects (feat. Kate Micucci, Lamar Abrams & Reagan Gomez-Preston).mp3
+37:Steven Universe songs/40 - G-G-G-Ghost (feat. Kate Micucci).mp3
+38:Steven Universe songs/41 - That Distant Shore (feat. Jennifer Paz).mp3
+39:Steven Universe songs/42 - Ruby Rider (feat. Charlyne Yi).mp3
+40:Steven Universe songs/43 - For Just One Day Let's Only Think about (Love) (feat. Zach Callison, Deedee Magno Hall,....mp3
+41:Steven Universe songs/44 - Familiar (feat. Zach Callison).mp3
+42:Steven Universe songs/45 - Escapism (feat. AJ Michalka, Zach Callison & Grace Rolek).mp3
+43:Steven Universe songs/46 - Let Me Ska My Van Into Your Heart (feat. Kate Micucci).mp3
+44:Steven Universe songs/47 - We Are The Crystal Gems (feat. Zach Callison) (Change Your Mind Version).mp3
+45:Steven Universe songs/48 - Change Your Mind (feat. Zach Callison).mp3
+46:Steven Universe songs/49 - Love Like You (feat. Rebecca Sugar) (Reprise).mp3
+47:Steven Universe songs/50 - Steven Universe The Movie - The Tale of Steven - (OFFICIAL VIDEO).mp3
+48:Steven Universe songs/51 - Steven Universe The Movie - Let Us Adore You - (OFFICIAL VIDEO).mp3
+49:Steven Universe songs/52 - Steven Universe The Movie - Happily Ever After - (OFFICIAL VIDEO).mp3
+50:Steven Universe songs/53 - Steven Universe The Movie ｜ Other Friends ｜ (OFFICIAL VIDEO).mp3
+51:Steven Universe songs/54 - Steven Universe The Movie - system⧸BOOT.PearlFinal(3).Info - (OFFICIAL VIDEO).mp3
+52:Steven Universe songs/55 - Steven Universe The Movie - Who We Are - (OFFICIAL VIDEO).mp3
+53:Steven Universe songs/56 - Steven Universe The Movie - Isn’t It Love？ [feat. Estelle] - (OFFICIAL VIDEO).mp3
+54:Steven Universe songs/57 - Steven Universe The Movie - No Matter What - (OFFICIAL VIDEO).mp3
+55:Steven Universe songs/58 - Steven Universe The Movie - Disobedient - (OFFICIAL VIDEO).mp3
+56:Steven Universe songs/59 - Steven Universe The Movie - Independent Together - (OFFICIAL VIDEO).mp3
+57:Steven Universe songs/60 - Steven Universe The Movie - Drift Away [feat. Sarah Stiles]  - (OFFICIAL VIDEO).mp3
+58:Steven Universe songs/61 - Steven Universe The Movie - Found - (OFFICIAL VIDEO).mp3
+59:Steven Universe songs/62 - Steven Universe The Movie - True Kinda Love [Estelle & Zach Callison] OFFICIAL.mp3
+60:Steven Universe songs/63 - Steven Universe The Movie - Change (feat. Zach Callison) - (OFFICIAL VIDEO).mp3
+61:Steven Universe songs/64 - Steven Universe The Movie - Let Us Adore You [Reprise] - (OFFICIAL VIDEO).mp3
+62:Steven Universe songs/65 - Steven Universe The Movie - Finale - (OFFICIAL VIDEO).mp3
+playlist_end

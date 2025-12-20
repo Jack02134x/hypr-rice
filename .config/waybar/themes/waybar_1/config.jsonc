@@ -1,0 +1,36 @@
+// __        __          _                 
+// \ \      / /_ _ _   _| |__   __ _ _ __  
+//  \ \ /\ / / _` | | | | '_ \ / _` | '__| 
+//   \ V  V / (_| | |_| | |_) | (_| | |    
+//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    
+//                 |___/                   
+//  
+// by Frogprog (2025) 
+// ----------------------------------------------------- 
+{
+  // include modules file
+  "include": [
+    "~/.config/waybar/themes/waybar_1/modules.jsonc"
+  ],
+
+  // make the bar as the top layer
+  "layer": "top",
+
+  // make the bar appear on the top
+  "position": "top",
+
+  // moduler on the left
+  "modules-left": [
+    "group/info-stuff", 
+    "group/expand", 
+    "custom/separator",
+    "tray",
+  ],
+
+  // modules on the center
+  "modules-center": ["hyprland/workspaces"],
+
+  // modules on the right
+  "modules-right": ["group/system-stuff"],
+}
+

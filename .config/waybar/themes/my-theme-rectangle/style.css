@@ -1,0 +1,200 @@
+@import "/home/jack/.config/waybar/matugen/matugen-waybar.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 24px;
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0;
+}
+
+window#waybar {
+    background: rgba(0,0,0,0.3);
+}
+
+tooltip {
+    border-radius: 12px;
+    background-color: rgba(0,0,0,1);
+}
+
+#clock {
+    background-color: rgba(0,0,0,1);
+    color: @secondary;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#custom-notification{
+    background-color: rgba(0,0,0,1);
+    color: @secondary;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+
+#workspaces {
+    background-color: rgba(0,0,0,1);
+    color: @secondary;
+    padding-right: 10px;
+    border-radius: 0px 0px 0px 0;
+}
+#cava {
+    padding-left: 15px;
+    color: @inverse_primary;
+}
+
+#workspaces button.visible {
+    color: @inverse_primary;
+}
+
+#workspaces button {
+    margin: 0px 5px;
+    padding: 0 5px;
+    border-radius: 6px;
+}
+
+#battery {
+    background-color: rgba(0,0,0,1);
+    color: @secondary;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 0px;
+}
+
+#backlight {
+    background-color: rgba(0,0,0,1);
+    color: @secondary;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 0px;
+}
+
+#wireplumber {
+    background-color: rgba(0,0,0,1);
+    color: @secondary;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 0px 0;
+}
+
+#custom-gpucputemps {
+    background-color: rgba(0,0,0,1);
+    color: @secondary;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#custom-gpucputemps.hot {
+color: #ff5555;
+font-weight: bold;
+}
+
+#memory {
+    background-color: rgba(0,0,0,1);
+    color: @secondary;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#network {
+    background-color: rgba(0,0,0,1);
+    color: @secondary;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#tray {
+    background-color: rgba(0,0,0,1);
+    color: @secondary;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#bluetooth {
+    background-color: rgba(0,0,0,1);
+    color: @secondary;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#image {
+    background-color: rgba(0,0,0,1);
+    padding-left: 10px;
+    padding-right: 0px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#custom-quit,
+#custom-lock,
+#custom-reboot,
+#idle_inhibitor,
+#custom-power {
+    background-color: rgba(0,0,0,1);
+    color: @inverse_primary;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#custom-icon-arch {
+    background-color: rgba(0,0,0,1);
+    color: @inverse_primary;
+    font-size: 18px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 0px 0px 0px 12px;
+}
+
+#custom-icon-left {
+    color: rgba(0,0,0,1);
+    font-size: 34px;
+    margin-top: -20px;
+    margin-right: -14px;
+}
+
+#custom-icon-left-outer {
+    color: rgba(0,0,0,1);
+    font-size: 34px;
+    margin-top: -20px;
+    margin-right: -14px;
+    margin-left: 10px;
+}
+
+#custom-icon-split {
+    background-color: rgba(0,0,0,1);
+    color: @inverse_primary;
+    margin-top: -4px;
+    font-size: 17px;
+}
+
+#custom-icon-right {
+    color: rgba(0,0,0,1);
+    font-size: 34px;
+    margin-top: -20px;
+    margin-left: -14px;
+}
+
+#custom-icon-right-outer {
+    color: rgba(0,0,0,1);
+    font-size: 34px;
+    margin-top: -20px;
+    margin-left: -14px;
+    margin-right: 10px;
+}
