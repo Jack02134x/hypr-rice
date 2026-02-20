@@ -1,1 +1,1 @@
-pkill waybar; pkill bongocat; waybar --config ~/.config/waybar/themes/my-theme/config.jsonc --style ~/.config/waybar/themes/my-theme/style.css & bongocat -c ~/.config/waybar/themes/my-theme/my-theme-bongo.conf &
+pkill waybar; pkill bongocat; waybar --config ~/.config/waybar/themes/minimal/config.jsonc --style ~/.config/waybar/themes/minimal/style.css & bongocat -c ~/.config/waybar/themes/minimal/minimal-bongo.conf &

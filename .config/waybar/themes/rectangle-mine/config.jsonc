@@ -128,8 +128,8 @@
     },
 
   "cava": {
-    "on-click": "pkill python3; pkill mpv;python3 ~/python-yt-project/play_entrire_playlist.py",
-    "on-right-click": "pkill python3 ; pkill mpv",
+    "on-click": "pkill python; pkill mpv;  python /home/jack/.config/hypr/wallpaperslideshow.py & python /home/jack/python-yt-project/play_entire_playlist.py",
+    "on-click-right": "pkill python ; pkill mpv; python /home/jack/.config/hypr/wallpaperslideshow.py &",
     "cava_config": "$HOME/.config/cava/config",
     "framerate": 60,
     "autosens": 1,
@@ -187,7 +187,7 @@
   },
 
   "image": {
-    "path": "/home/jack/.config/waybar/themes/my-theme/Profile Pic.png",
+    "path": "/home/jack/.config/waybar/themes/mine/Profile Pic.png",
     "size": 20,
     "exec": "",
     "interval": 0,

@@ -1,36 +1,23 @@
 {
   "layer": "bottom",
   "position": "top",
-  "height": 24,
-  "modules-left": [
-    "custom/icon-left-outer",
+  "height": 18,
+  "modules-center": [
+    "cava",
     "group/group-power",
     "custom/icon-split",
     "hyprland/workspaces",
-    "custom/icon-right",
-    "cava",
-  ],
-  "modules-center": [
-    "custom/icon-left",
-    "clock",
     "custom/icon-split",
     "custom/notification",
-    "custom/icon-right",
-  ],
-  "modules-right": [
-    "custom/icon-left",
-    "tray",
     "custom/icon-split",
-    "group/connections",
-    "custom/icon-split",
-    "memory",
-    "custom/icon-split",
-    "custom/gpucputemps",
+    "clock",
     "custom/icon-split",
     "group/batt",
     "custom/icon-split",
+    "group/connections",
+    "custom/icon-split",
     "wireplumber",
-    "custom/icon-right-outer",
+    "cava",
   ],
 
   "clock": {
@@ -126,13 +113,13 @@
   },
 
   "cava": {
-    "on-click": "mpv --no-video \"$(find ~/Music -type f \\( -iname '*.mp3' -o -iname '*.opus' -o -iname '*.ogg' -o -iname '*.flac' -o -iname '*.wav' -o -iname '*.m4a' -o -iname '*.aac' \\) | shuf -n 1)\"",
-    "on-right-click": "pkill mpv",
+    "on-click": "pkill python; pkill mpv;  python /home/jack/.config/hypr/wallpaperslideshow.py & python /home/jack/python-yt-project/play_entire_playlist.py",
+    "on-click-right": "pkill python ; pkill mpv; python /home/jack/.config/hypr/wallpaperslideshow.py &",
     "cava_config": "$HOME/.config/cava/config",
     "framerate": 60,
     "autosens": 1,
     "sensitivity": 4.5,
-    "bars": 25,
+    "bars": 50,
     "lower_cutoff_freq": 100,
     "higher_cutoff_freq": 10000,
     "method": "pulse",
@@ -147,13 +134,6 @@
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
     "actions": {},
   },
-  "custom/gpucputemps": {
-    "interval": 2,
-    "return-type": "json",
-    "exec": "sh -c 'cpu=$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000)); gpu=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits); out=\"CPU: ${cpu}°C  GPU: ${gpu}°C\"; if [ $cpu -ge 100 ] || [ $gpu -ge 80 ]; then echo \"{\\\"text\\\": \\\"$out\\\", \\\"class\\\": \\\"hot\\\", \\\"color\\\": \\\"#ff5555\\\"}\"; else echo \"{\\\"text\\\": \\\"$out\\\"}\"; fi'",
-    "format": "{}",
-    "on-click": "kitty sh -c 'pkill btop; btop; exit'",
-  },
 
   "bluetooth": {
     "interval": 5,
@@ -165,11 +145,6 @@
     "on-click": "kitty sh -c 'pkill bluetuith;bluetuith; exit'",
   },
 
-  "memory": {
-    "interval": 30,
-    "format": "{used:0.1f}GB/{total:0.1f}GB",
-    "on-click": "kitty sh -c 'pkill htop;htop; exit'",
-  },
   "network": {
     "format": "{ifname}",
     "format-wifi": "Connected ({signalStrength}%) ",
@@ -184,7 +159,7 @@
   },
 
   "image": {
-    "path": "/home/jack/.config/waybar/themes/my-theme/Profile Pic.png",
+    "path": "/home/jack/.config/waybar/themes/mine/Profile Pic.png",
     "size": 20,
     "exec": "",
     "interval": 0,
@@ -217,7 +192,6 @@
       "custom/power-saver",
       "custom/balance",
       "custom/performance",
-      "idle_inhibitor",
     ],
   },
 
@@ -227,7 +201,13 @@
       "transition-duration": 500,
       "transition-left-to-right": false,
     },
-    "modules": ["battery", "backlight", "custom/icon-split"],
+    "modules": [
+      "battery",
+      "idle_inhibitor",
+      "custom/icon-split",
+      "backlight",
+      "custom/icon-split",
+    ],
   },
 
   "group/connections": {
@@ -243,24 +223,8 @@
     "exec": "echo '󰣇'",
     "interval": 0,
   },
-  "custom/icon-left": {
-    "exec": "echo '✦'",
-    "interval": 0,
-  },
-  "custom/icon-left-outer": {
-    "exec": "echo '✦'",
-    "interval": 0,
-  },
   "custom/icon-split": {
     "exec": "echo '|'",
-    "interval": 0,
-  },
-  "custom/icon-right": {
-    "exec": "echo '✦'",
-    "interval": 0,
-  },
-  "custom/icon-right-outer": {
-    "exec": "echo '✦'",
     "interval": 0,
   },
 

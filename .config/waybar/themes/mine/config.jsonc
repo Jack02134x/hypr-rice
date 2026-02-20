@@ -1,4 +1,5 @@
-{ "layer": "bottom",
+{
+  "layer": "bottom",
   "position": "top",
   "height": 24,
   "modules-left": [
@@ -7,9 +8,15 @@
     "custom/icon-split",
     "hyprland/workspaces",
     "custom/icon-right",
-    "cava"
+    "cava",
   ],
-  "modules-center": ["custom/icon-left", "clock", "custom/icon-split" , "custom/notification", "custom/icon-right"],
+  "modules-center": [
+    "custom/icon-left",
+    "clock",
+    "custom/icon-split",
+    "custom/notification",
+    "custom/icon-right",
+  ],
   "modules-right": [
     "custom/icon-left",
     "tray",
@@ -23,7 +30,7 @@
     "group/batt",
     "custom/icon-split",
     "wireplumber",
-    "custom/icon-right-outer"
+    "custom/icon-right-outer",
   ],
 
   "clock": {
@@ -41,73 +48,61 @@
         "days": "<span color='#ecc6d9'><b>{}</b></span>",
         "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
-    }
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
   },
 
-	 "custom/notification": {
-		 "tooltip": true,
-		 "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
-		 "format": "{} {icon} ",
-		 "format-icons": {
-			 "notification": "<span foreground='red'><sup></sup></span>",
-			 "none": "",
-			 "dnd-notification": "<span foreground='red'><sup></sup></span>",
-			 "dnd-none": "",
-			 "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-			 "inhibited-none": "",
-			 "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-			 "dnd-inhibited-none": ""
-		 },
-		 "return-type": "json",
-		 "exec-if": "which swaync-client",
-		 "exec": "swaync-client -swb",
-		 "on-click": "sleep 0.1 && swaync-client -t -sw",
-		 "on-click-right": "swaync-client -d -sw",
-		 "escape": true
-	 },
-
-  "hyprland/workspaces": {
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
+  "custom/notification": {
+    "tooltip": true,
+    "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+    "format": "{} {icon} ",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": "",
     },
-    "format": "{icon} {windows}",
-    "window-rewrite-default": "",
-     "window-rewrite": {
-      "title<.*youtube.*>": "",
-      "class<firefox>": "🌍",
-      "title<.*github.*>": "",
-      "class<org.telegram.desktop>": "",
-      "class<ZapZap>": "",
-      "kitty": "",
-      "code": "󰨞",
-      "dolphin": ""
-    }
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "empty": "",
+    },
+    "persistent-workspaces": {
+      "eDP-1": [1, 2, 3, 4, 5],
+    },
   },
   "battery": {
     "bat": "BAT1",
     "interval": 10,
     "states": {
       "warning": 30,
-      "critical": 15
+      "critical": 15,
     },
-
     "format": "{capacity}% {icon}",
     "format-charging": "󰂄 {capacity}%",
     "format-icons": [
-          "󰁻 [░░░░░]",
-          "󰁽 [█░░░░]",
-          "󰁾 [██░░░]",
-          "󰁿 [███░░]",
-          "󰂂 [████░]",
-          "󰁹 [█████]",
-        ],
-    "max-length": 25
+      "󰁻 [░░░░░]",
+      "󰁽 [█░░░░]",
+      "󰁾 [██░░░]",
+      "󰁿 [███░░]",
+      "󰂂 [████░]",
+      "󰁹 [█████]",
+    ],
+    "max-length": 25,
   },
 
   "backlight": {
@@ -118,32 +113,31 @@
     "on-double-click": "brightnessctl set 50%",
     "on-scroll-up": "brightnessctl set 2%+",
     "on-scroll-down": "brightnessctl set 2%-",
-    "tooltip-format": "Backlight"
+    "tooltip-format": "Backlight",
   },
 
-    "wireplumber": {
-        "format": "{icon} {volume}%",
-        "format-muted": "󰸈",
-        "format-bluetooth": "{icon} {volume}%",
-        "tooltip": false,
-        "format-icons": [
-          "󰕿","󰖀","󰖀","󰕾","󰕾","󱄡",],
-        "on-click": "pavucontrol",
-    },
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰸈",
+    "format-bluetooth": "{icon} {volume}%",
+    "tooltip": false,
+    "format-icons": ["󰕿", "󰖀", "󰖀", "󰕾", "󰕾", "󱄡"],
+    "on-click": "pavucontrol",
+  },
 
   "cava": {
-    "on-click": "mpv --no-video \"$(find ~/Music -type f \\( -iname '*.mp3' -o -iname '*.opus' -o -iname '*.ogg' -o -iname '*.flac' -o -iname '*.wav' -o -iname '*.m4a' -o -iname '*.aac' \\) | shuf -n 1)\"",
-    "on-right-click": "pkill mpv",
+    "on-click": "pkill python; pkill mpv;  python /home/jack/.config/hypr/wallpaperslideshow.py & python /home/jack/python-yt-project/play_entire_playlist.py",
+    "on-click-right": "pkill python ; pkill mpv; python /home/jack/.config/hypr/wallpaperslideshow.py &",
     "cava_config": "$HOME/.config/cava/config",
     "framerate": 60,
     "autosens": 1,
-    "sensitivity": 0.5,
+    "sensitivity": 4.5,
     "bars": 25,
     "lower_cutoff_freq": 100,
     "higher_cutoff_freq": 10000,
     "method": "pulse",
     "source": "auto",
-    "stereo": true,
+    "stereo": false,
     "reverse": false,
     "bar_delimiter": 0,
     "monstercat": true,
@@ -151,16 +145,15 @@
     "noise_reduction": 0.3,
     "input_delay": 1,
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    "actions": {}
+    "actions": {},
   },
   "custom/gpucputemps": {
     "interval": 2,
     "return-type": "json",
     "exec": "sh -c 'cpu=$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000)); gpu=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits); out=\"CPU: ${cpu}°C  GPU: ${gpu}°C\"; if [ $cpu -ge 100 ] || [ $gpu -ge 80 ]; then echo \"{\\\"text\\\": \\\"$out\\\", \\\"class\\\": \\\"hot\\\", \\\"color\\\": \\\"#ff5555\\\"}\"; else echo \"{\\\"text\\\": \\\"$out\\\"}\"; fi'",
     "format": "{}",
-    "on-click": "kitty sh -c 'pkill btop; btop; exit'"
+    "on-click": "kitty sh -c 'pkill btop; btop; exit'",
   },
-
 
   "bluetooth": {
     "interval": 5,
@@ -169,13 +162,13 @@
     "format-on": "Disconnected 󰂯",
     "tooltip": true,
     "tooltip-format": "Bluetooth",
-    "on-click": "kitty sh -c 'pkill bluetuith;bluetuith; exit'"
+    "on-click": "kitty sh -c 'pkill bluetuith;bluetuith; exit'",
   },
 
   "memory": {
     "interval": 30,
     "format": "{used:0.1f}GB/{total:0.1f}GB",
-    "on-click": "kitty sh -c 'pkill htop;htop; exit'"
+    "on-click": "kitty sh -c 'pkill htop;htop; exit'",
   },
   "network": {
     "format": "{ifname}",
@@ -187,29 +180,29 @@
     "tooltip-format-ethernet": "{ifname} ({ipaddr}) 󰈀",
     "tooltip-format-disconnected": "Disconnected  ",
     "max-length": 50,
-    "on-click": "kitty sh -c 'pkill nmtui; nmtui; exit'"
+    "on-click": "kitty sh -c 'pkill nmtui; nmtui; exit'",
   },
 
   "image": {
-    "path": "/home/jack/.config/waybar/themes/my-theme/Profile Pic.png",
+    "path": "/home/jack/.config/waybar/themes/mine/Profile Pic.png",
     "size": 20,
     "exec": "",
     "interval": 0,
     "tooltip": true,
-    "on-click": "rofi -show drun"
+    "on-click": "rofi -show drun",
   },
 
   "tray": {
     "icon-size": 15,
-    "spacing": 4
+    "spacing": 4,
   },
 
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
       "activated": "",
-      "deactivated": ""
-    }
+      "deactivated": "",
+    },
   },
 
   "group/group-power": {
@@ -217,73 +210,72 @@
     "drawer": {
       "transition-duration": 500,
       "children-class": "not-power",
-      "transition-left-to-right": true
+      "transition-left-to-right": true,
     },
     "modules": [
       "image",
-      "custom/lock",
-      "custom/reboot",
-      "custom/power",
-      "idle_inhibitor"
-    ]
+      "custom/power-saver",
+      "custom/balance",
+      "custom/performance",
+    ],
   },
 
   "group/batt": {
     "orientation": "horizontal",
     "drawer": {
       "transition-duration": 500,
-      "transition-left-to-right": false
+      "transition-left-to-right": false,
     },
-    "modules": ["battery", "backlight", "custom/icon-split"]
+    "modules": ["battery", "idle_inhibitor", "custom/icon-split" ,"backlight", "custom/icon-split"],
   },
 
   "group/connections": {
     "orientation": "horizontal",
     "drawer": {
       "transition-duration": 500,
-      "transition-left-to-right": true
+      "transition-left-to-right": true,
     },
-    "modules": ["network", "custom/icon-split", "bluetooth"]
+    "modules": ["network", "custom/icon-split", "bluetooth"],
   },
 
   "custom/icon-arch": {
     "exec": "echo '󰣇'",
-    "interval": 0
+    "interval": 0,
   },
   "custom/icon-left": {
     "exec": "echo '✦'",
-    "interval": 0
+    "interval": 0,
   },
   "custom/icon-left-outer": {
     "exec": "echo '✦'",
-    "interval": 0
+    "interval": 0,
   },
   "custom/icon-split": {
     "exec": "echo '|'",
-    "interval": 0
+    "interval": 0,
   },
   "custom/icon-right": {
     "exec": "echo '✦'",
-    "interval": 0
+    "interval": 0,
   },
   "custom/icon-right-outer": {
     "exec": "echo '✦'",
-    "interval": 0
+    "interval": 0,
   },
 
-  "custom/lock": {
-    "format": "󰍁",
+  "custom/power-saver": {
+    "format": "",
     "tooltip": false,
-    "on-click": "hyprlock"
+    "on-click": "powerprofilesctl set power-saver; notify-send --app-name 'Power Manager' -i  ~/.config/notify-send/power_icon.png 'Battery consumption set to power-saver' ",
   },
-  "custom/reboot": {
-    "format": "󰜉",
+  "custom/balance": {
+    "format": "",
     "tooltip": false,
-    "on-click": "reboot"
+    "on-click": "powerprofilesctl set balanced; notify-send --app-name 'Power Manager' -i  ~/.config/notify-send/power_icon.png 'Battery consumption set to balance' ",
   },
-  "custom/power": {
-    "format": "",
+  "custom/performance": {
+    "format": "",
     "tooltip": false,
-    "on-click": "shutdown now"
-  }
+    "on-click": "powerprofilesctl set performance; notify-send --app-name 'Power Manager' -i  ~/.config/notify-send/power_icon.png 'Battery consumption set to performance' ",
+  },
 }

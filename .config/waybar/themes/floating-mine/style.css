@@ -5,11 +5,17 @@
 * {
     border: none;
     border-radius: 0;
-    min-height: 24px;
+    min-height: 18px;
     font-family: "JetBrainsMono Nerd Font Mono";
     font-weight: 500;
     font-size: 12px;
     padding: 0;
+}
+
+.modules-center {
+    padding: 2px;
+    margin: 5px 0px 5px 0px;
+    border-radius: 10px;
 }
 
 window#waybar {
@@ -18,36 +24,37 @@ window#waybar {
 
 tooltip {
     border-radius: 12px;
-    background-color: @surface;
+    background-color: @surface-alpha;
 }
 
 #clock {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @secondary;
     font-size: 12px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 0px 0px 0px 12px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 #custom-notification{
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @secondary;
     font-size: 12px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 0px 0px 12px 0px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 
 #workspaces {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @secondary;
     padding-right: 10px;
-    border-radius: 0px 0px 12px 0;
+    border-radius: 0px 0px 0px 0;
 }
 #cava {
     color: @inverse_primary;
+    margin: 10px 0px 0px 0px;
 }
 
 #workspaces button.visible {
@@ -59,9 +66,9 @@ tooltip {
     padding: 0 5px;
     border-radius: 6px;
 }
-
+#idle_inhibitor,
 #battery {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @secondary;
     font-size: 12px;
     padding-left: 10px;
@@ -70,7 +77,7 @@ tooltip {
 }
 
 #backlight {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @secondary;
     font-size: 12px;
     padding-left: 10px;
@@ -79,16 +86,16 @@ tooltip {
 }
 
 #wireplumber {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @secondary;
     font-size: 12px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 0px 0px 12px 0;
+    border-radius: 0px 12px 12px 0;
 }
 
 #custom-gpucputemps {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @secondary;
     font-size: 12px;
     padding-left: 10px;
@@ -101,7 +108,7 @@ font-weight: bold;
 }
 
 #memory {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @secondary;
     font-size: 12px;
     padding-left: 10px;
@@ -109,7 +116,7 @@ font-weight: bold;
 }
 
 #network {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @secondary;
     font-size: 12px;
     padding-left: 10px;
@@ -118,7 +125,7 @@ font-weight: bold;
 }
 
 #tray {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @secondary;
     font-size: 12px;
     padding-left: 10px;
@@ -127,7 +134,7 @@ font-weight: bold;
 }
 
 #bluetooth {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @secondary;
     font-size: 12px;
     padding-left: 10px;
@@ -136,18 +143,17 @@ font-weight: bold;
 }
 
 #image {
-    background-color: @surface;
+    background-color: @surface-alpha;
     padding-left: 10px;
     padding-right: 0px;
-    border-radius: 0px 0px 0px 12px;
+    border-radius: 12px 0px 0px 12px;
 }
 
 #custom-quit,
 #custom-power-saver,
 #custom-balance,
-#idle_inhibitor,
 #custom-performance {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @inverse_primary;
     font-size: 18px;
     padding-left: 10px;
@@ -155,47 +161,31 @@ font-weight: bold;
 }
 
 #custom-icon-arch {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @inverse_primary;
     font-size: 18px;
     padding-left: 8px;
     padding-right: 8px;
-    border-radius: 0px 0px 0px 12px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 #custom-icon-left {
-    color: @surface;
+    color: @surface-alpha;
     font-size: 34px;
     margin-top: -21px;
     margin-right: -14px;
-}
-
-#custom-icon-left-outer {
-    color: @surface;
-    font-size: 34px;
-    margin-top: -21px;
-    margin-right: -14px;
-    margin-left: 10px;
 }
 
 #custom-icon-split {
-    background-color: @surface;
+    background-color: @surface-alpha;
     color: @inverse_primary;
     margin-top: -4px;
     font-size: 17px;
 }
 
 #custom-icon-right {
-    color: @surface;
+    color: @surface-alpha;
     font-size: 34px;
     margin-top: -21px;
     margin-left: -14px;
-}
-
-#custom-icon-right-outer {
-    color: @surface;
-    font-size: 34px;
-    margin-top: -21px;
-    margin-left: -14px;
-    margin-right: 10px;
 }

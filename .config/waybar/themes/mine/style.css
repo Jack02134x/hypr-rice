@@ -59,7 +59,7 @@ tooltip {
     padding: 0 5px;
     border-radius: 6px;
 }
-
+#idle_inhibitor,
 #battery {
     background-color: @surface;
     color: @secondary;
@@ -143,10 +143,9 @@ font-weight: bold;
 }
 
 #custom-quit,
-#custom-lock,
-#custom-reboot,
-#idle_inhibitor,
-#custom-power {
+#custom-power-saver,
+#custom-balance,
+#custom-performance {
     background-color: @surface;
     color: @inverse_primary;
     font-size: 18px;
