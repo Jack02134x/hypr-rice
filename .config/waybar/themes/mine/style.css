@@ -135,13 +135,6 @@ font-weight: bold;
     border-radius: 0px 0px 0px 0px;
 }
 
-#image {
-    background-color: @surface;
-    padding-left: 10px;
-    padding-right: 0px;
-    border-radius: 0px 0px 0px 12px;
-}
-
 #custom-quit,
 #custom-power-saver,
 #custom-balance,

@@ -1,13 +1,14 @@
-{ "layer": "bottom",
+{
+  "layer": "bottom",
   "position": "top",
   "height": 24,
   "modules-left": [
     "group/group-power",
     "custom/icon-split",
     "hyprland/workspaces",
-    "cava"
+    "cava",
   ],
-  "modules-center": ["clock", "custom/icon-split" , "custom/notification",],
+  "modules-center": ["clock", "custom/icon-split", "custom/notification"],
   "modules-right": [
     "tray",
     "custom/icon-split",
@@ -37,32 +38,32 @@
         "days": "<span color='#ecc6d9'><b>{}</b></span>",
         "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
-    }
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
   },
 
-	 "custom/notification": {
-		 "tooltip": true,
-		 "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
-		 "format": "{} {icon} ",
-		 "format-icons": {
-			 "notification": "<span foreground='red'><sup></sup></span>",
-			 "none": "",
-			 "dnd-notification": "<span foreground='red'><sup></sup></span>",
-			 "dnd-none": "",
-			 "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-			 "inhibited-none": "",
-			 "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-			 "dnd-inhibited-none": ""
-		 },
-		 "return-type": "json",
-		 "exec-if": "which swaync-client",
-		 "exec": "swaync-client -swb",
-		 "on-click": "sleep 0.1 && swaync-client -t -sw",
-		 "on-click-right": "swaync-client -d -sw",
-		 "escape": true
-	 },
+  "custom/notification": {
+    "tooltip": true,
+    "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+    "format": "{} {icon} ",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": "",
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
 
   "hyprland/workspaces": {
     "persistent-workspaces": {
@@ -74,7 +75,7 @@
     },
     "format": "{icon} {windows}",
     "window-rewrite-default": "",
-     "window-rewrite": {
+    "window-rewrite": {
       "title<.*youtube.*>": "",
       "class<firefox>": "🌍",
       "title<.*github.*>": "",
@@ -82,8 +83,8 @@
       "class<ZapZap>": "",
       "kitty": "",
       "code": "󰨞",
-      "dolphin": ""
-    }
+      "dolphin": "",
+    },
   },
 
   "battery": {
@@ -91,19 +92,19 @@
     "interval": 10,
     "states": {
       "warning": 30,
-      "critical": 15
+      "critical": 15,
     },
     "format": "{capacity}% {icon}",
     "format-charging": "󰂄 {capacity}%",
     "format-icons": [
-          "󰁻 [░░░░░]",
-          "󰁽 [█░░░░]",
-          "󰁾 [██░░░]",
-          "󰁿 [███░░]",
-          "󰂂 [████░]",
-          "󰁹 [█████]",
-        ],
-    "max-length": 25
+      "󰁻 [░░░░░]",
+      "󰁽 [█░░░░]",
+      "󰁾 [██░░░]",
+      "󰁿 [███░░]",
+      "󰂂 [████░]",
+      "󰁹 [█████]",
+    ],
+    "max-length": 25,
   },
 
   "backlight": {
@@ -114,18 +115,17 @@
     "on-double-click": "brightnessctl set 50%",
     "on-scroll-up": "brightnessctl set 2%+",
     "on-scroll-down": "brightnessctl set 2%-",
-    "tooltip-format": "Backlight"
+    "tooltip-format": "Backlight",
   },
 
-    "wireplumber": {
-        "format": "{icon} {volume}%",
-        "format-muted": "󰸈",
-        "format-bluetooth": "{icon} {volume}%",
-        "tooltip": false,
-        "format-icons": [
-          "󰕿","󰖀","󰖀","󰕾","󰕾","󱄡",],
-        "on-click": "pavucontrol",
-    },
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰸈",
+    "format-bluetooth": "{icon} {volume}%",
+    "tooltip": false,
+    "format-icons": ["󰕿", "󰖀", "󰖀", "󰕾", "󰕾", "󱄡"],
+    "on-click": "pavucontrol",
+  },
 
   "cava": {
     "on-click": "pkill python; pkill mpv;  python /home/jack/.config/hypr/wallpaperslideshow.py & python /home/jack/python-yt-project/play_entire_playlist.py",
@@ -147,16 +147,15 @@
     "noise_reduction": 0.3,
     "input_delay": 1,
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    "actions": {}
+    "actions": {},
   },
   "custom/gpucputemps": {
     "interval": 2,
     "return-type": "json",
     "exec": "sh -c 'cpu=$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000)); gpu=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits); out=\"CPU: ${cpu}°C  GPU: ${gpu}°C\"; if [ $cpu -ge 100 ] || [ $gpu -ge 80 ]; then echo \"{\\\"text\\\": \\\"$out\\\", \\\"class\\\": \\\"hot\\\", \\\"color\\\": \\\"#ff5555\\\"}\"; else echo \"{\\\"text\\\": \\\"$out\\\"}\"; fi'",
     "format": "{}",
-    "on-click": "kitty sh -c 'pkill btop; btop; exit'"
+    "on-click": "kitty sh -c 'pkill btop; btop; exit'",
   },
-
 
   "bluetooth": {
     "interval": 5,
@@ -165,13 +164,13 @@
     "format-on": "Disconnected 󰂯",
     "tooltip": true,
     "tooltip-format": "Bluetooth",
-    "on-click": "kitty sh -c 'pkill bluetuith;bluetuith; exit'"
+    "on-click": "kitty sh -c 'pkill bluetuith;bluetuith; exit'",
   },
 
   "memory": {
     "interval": 30,
     "format": "{used:0.1f}GB/{total:0.1f}GB",
-    "on-click": "kitty sh -c 'pkill htop;htop; exit'"
+    "on-click": "kitty sh -c 'pkill htop;htop; exit'",
   },
   "network": {
     "format": "{ifname}",
@@ -183,29 +182,20 @@
     "tooltip-format-ethernet": "{ifname} ({ipaddr}) 󰈀",
     "tooltip-format-disconnected": "Disconnected  ",
     "max-length": 50,
-    "on-click": "kitty sh -c 'pkill nmtui; nmtui; exit'"
-  },
-
-  "image": {
-    "path": "/home/jack/.config/waybar/themes/mine/Profile Pic.png",
-    "size": 20,
-    "exec": "",
-    "interval": 0,
-    "tooltip": true,
-    "on-click": "rofi -show drun"
+    "on-click": "kitty sh -c 'pkill nmtui; nmtui; exit'",
   },
 
   "tray": {
     "icon-size": 15,
-    "spacing": 4
+    "spacing": 4,
   },
 
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
       "activated": "",
-      "deactivated": ""
-    }
+      "deactivated": "",
+    },
   },
 
   "group/group-power": {
@@ -213,73 +203,67 @@
     "drawer": {
       "transition-duration": 500,
       "children-class": "not-power",
-      "transition-left-to-right": true
+      "transition-left-to-right": true,
     },
     "modules": [
-      "image",
+      "custom/icon-arch",
       "custom/lock",
       "custom/reboot",
       "custom/power",
-      "idle_inhibitor"
-    ]
+      "idle_inhibitor",
+    ],
   },
 
   "group/batt": {
     "orientation": "horizontal",
     "drawer": {
       "transition-duration": 500,
-      "transition-left-to-right": false
+      "transition-left-to-right": false,
     },
-    "modules": ["battery", "backlight", "custom/icon-split"]
+    "modules": ["battery", "backlight", "custom/icon-split"],
   },
 
   "group/connections": {
     "orientation": "horizontal",
     "drawer": {
       "transition-duration": 500,
-      "transition-left-to-right": true
+      "transition-left-to-right": true,
     },
-    "modules": ["network", "custom/icon-split", "bluetooth"]
+    "modules": ["network", "custom/icon-split", "bluetooth"],
   },
 
   "custom/icon-arch": {
-    "exec": "echo '󰣇'",
-    "interval": 0
+    "format": "󰣇",
   },
   "custom/icon-left": {
-    "exec": "echo '✦'",
-    "interval": 0
+    "format": "✦",
   },
   "custom/icon-left-outer": {
-    "exec": "echo '✦'",
-    "interval": 0
+    "format": "✦",
   },
   "custom/icon-split": {
-    "exec": "echo '|'",
-    "interval": 0
+    "format": "|",
   },
   "custom/icon-right": {
-    "exec": "echo '✦'",
-    "interval": 0
+    "format": "✦",
   },
   "custom/icon-right-outer": {
-    "exec": "echo '✦'",
-    "interval": 0
+    "format": "✦",
   },
 
   "custom/lock": {
     "format": "󰍁",
     "tooltip": false,
-    "on-click": "hyprlock"
+    "on-click": "hyprlock",
   },
   "custom/reboot": {
     "format": "󰜉",
     "tooltip": false,
-    "on-click": "reboot"
+    "on-click": "reboot",
   },
   "custom/power": {
     "format": "",
     "tooltip": false,
-    "on-click": "shutdown now"
-  }
+    "on-click": "shutdown now",
+  },
 }

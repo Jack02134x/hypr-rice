@@ -142,13 +142,6 @@ font-weight: bold;
     border-radius: 0px 0px 0px 0px;
 }
 
-#image {
-    background-color: @surface-alpha;
-    padding-left: 10px;
-    padding-right: 0px;
-    border-radius: 12px 0px 0px 12px;
-}
-
 #custom-quit,
 #custom-power-saver,
 #custom-balance,
@@ -166,14 +159,7 @@ font-weight: bold;
     font-size: 18px;
     padding-left: 8px;
     padding-right: 8px;
-    border-radius: 0px 0px 0px 0px;
-}
-
-#custom-icon-left {
-    color: @surface-alpha;
-    font-size: 34px;
-    margin-top: -21px;
-    margin-right: -14px;
+    border-radius: 12px 0px 0px 12px;
 }
 
 #custom-icon-split {
@@ -181,11 +167,4 @@ font-weight: bold;
     color: @inverse_primary;
     margin-top: -4px;
     font-size: 17px;
-}
-
-#custom-icon-right {
-    color: @surface-alpha;
-    font-size: 34px;
-    margin-top: -21px;
-    margin-left: -14px;
 }

@@ -158,15 +158,6 @@
     "on-click": "kitty sh -c 'pkill nmtui; nmtui; exit'",
   },
 
-  "image": {
-    "path": "/home/jack/.config/waybar/themes/mine/Profile Pic.png",
-    "size": 20,
-    "exec": "",
-    "interval": 0,
-    "tooltip": true,
-    "on-click": "rofi -show drun",
-  },
-
   "tray": {
     "icon-size": 15,
     "spacing": 4,
@@ -188,7 +179,7 @@
       "transition-left-to-right": true,
     },
     "modules": [
-      "image",
+      "custom/icon-arch",
       "custom/power-saver",
       "custom/balance",
       "custom/performance",
@@ -220,12 +211,10 @@
   },
 
   "custom/icon-arch": {
-    "exec": "echo '󰣇'",
-    "interval": 0,
+    "format": "󰣇",
   },
   "custom/icon-split": {
-    "exec": "echo '|'",
-    "interval": 0,
+    "format": "|",
   },
 
   "custom/power-saver": {

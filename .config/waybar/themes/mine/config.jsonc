@@ -183,15 +183,6 @@
     "on-click": "kitty sh -c 'pkill nmtui; nmtui; exit'",
   },
 
-  "image": {
-    "path": "/home/jack/.config/waybar/themes/mine/Profile Pic.png",
-    "size": 20,
-    "exec": "",
-    "interval": 0,
-    "tooltip": true,
-    "on-click": "rofi -show drun",
-  },
-
   "tray": {
     "icon-size": 15,
     "spacing": 4,
@@ -213,7 +204,7 @@
       "transition-left-to-right": true,
     },
     "modules": [
-      "image",
+      "custom/icon-arch",
       "custom/power-saver",
       "custom/balance",
       "custom/performance",
@@ -226,7 +217,13 @@
       "transition-duration": 500,
       "transition-left-to-right": false,
     },
-    "modules": ["battery", "idle_inhibitor", "custom/icon-split" ,"backlight", "custom/icon-split"],
+    "modules": [
+      "battery",
+      "idle_inhibitor",
+      "custom/icon-split",
+      "backlight",
+      "custom/icon-split",
+    ],
   },
 
   "group/connections": {
@@ -239,28 +236,22 @@
   },
 
   "custom/icon-arch": {
-    "exec": "echo '󰣇'",
-    "interval": 0,
+    "format": "󰣇",
   },
   "custom/icon-left": {
-    "exec": "echo '✦'",
-    "interval": 0,
+    "format": "✦",
   },
   "custom/icon-left-outer": {
-    "exec": "echo '✦'",
-    "interval": 0,
+    "format": "✦",
   },
   "custom/icon-split": {
-    "exec": "echo '|'",
-    "interval": 0,
+    "format": "|",
   },
   "custom/icon-right": {
-    "exec": "echo '✦'",
-    "interval": 0,
+    "format": "✦",
   },
   "custom/icon-right-outer": {
-    "exec": "echo '✦'",
-    "interval": 0,
+    "format": "✦",
   },
 
   "custom/power-saver": {

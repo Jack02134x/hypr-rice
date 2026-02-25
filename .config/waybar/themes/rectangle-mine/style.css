@@ -159,7 +159,7 @@ font-weight: bold;
     font-size: 18px;
     padding-left: 8px;
     padding-right: 8px;
-    border-radius: 0px 0px 0px 12px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 #custom-icon-left {
