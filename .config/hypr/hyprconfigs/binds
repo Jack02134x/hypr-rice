@@ -7,23 +7,23 @@ binds {
         bind = $mainMod, mouse_down, workspace, e-1
         bind = $mainMod, mouse_up, workspace, e+1
 
+        bind = $mainMod_Alt, M, exec, gcc ~/.scripts/mouseshit/mouse_invert.c -o ~/.local/bin/mouse_invert; pkill mouse_invert; mouse_invert
         # Kitty binds
         bind = $mainMod, Q, exec, $term
 
         # Screenshot/scripts binds
-        bind = , Print, exec, pkill wofi;~/.scripts/screenshot.sh
-        bind = $mainMod, C, exec, pkill wofi; bash ~/.scripts/quick-settings.sh
+        bind = $mainMod_Alt, P, exec, pkill wofi; ~/.scripts/screenshot.sh
+        bind = $mainMod_SHIFT, Q, exec, pkill wofi; bash ~/.scripts/quick-settings.sh
 
         # Application binds
         bind = $mainMod, D, killactive,
         bind = $mainMod_SHIFT, D, forcekillactive,
-        bind = $mainMod, E, exec, $explorer
-        bind = $mainMod_SHIFT, E, exec, thunar
-        bind = $mainMod, B, exec, firefox
-        bind = $mainMod_SHIFT, B, exec, $browser
-        bind = $mainMod_SHIFT, P, exec, pkill python; pkill mpv;  $wallpaper_command & python /home/jack/python-yt-project/play_entire_playlist.py;
-        bind = $mainMod, P, exec, pkill python ; pkill mpv; $wallpaper_command &
-
+        bind = $mainMod, E, exec, thunar
+        bind = $mainMod_SHIFT, E, exec, $explorer
+        bind = $mainMod, B, exec, $browser
+        bind = $mainMod_SHIFT, P, exec, pkill python; pkill mpv; python /home/jack/python-yt-project/play_entire_playlist.py
+        bind = $mainMod, P, exec, pkill python ; pkill mpv
+        bind = $mainMod, H, exec, /home/jack/.config/waybar/scripts/Colorpicker.sh
         bind = $mainMod_SHIFT, A, exec, cd Videos/anime/; ani-cli -d --rofi
         bind = $mainMod, A, exec, ani-cli --rofi
 
@@ -41,14 +41,14 @@ binds {
         bind = $mainMod_SHIFT, T, centerwindow
         bind = $mainMod, G, togglegroup,
         bind = $mainMod, tab, changegroupactive,
-        bind = $mainMod, J, togglesplit,
 
         # Wlogout
         bind = $mainMod, M, exec, pkill wlogout; wlogout
         bind = $mainMod, L, exec, $screenlock
-
-        bind = $mainMod_SHIFT, W, exec, ~/.scripts/wallpaperchanger.sh
-    	bind = $mainMod, W, exec, pkill wofi; ~/.config/waybar/waybar-switcher/Menu.sh
+        
+        bind = $mainMod, W, exec, pkill wofi; ~/.config/waybar/waybar-switcher/Menu.sh
+        bind = $mainMod_SHIFT, W, exec, pkill wofi; ~/.config/waybar/waybar-switcher/current.sh
+        bind = $mainMod_Alt, W, exec, skwd wall toggle
 
         # Move window with $mainMod + Shift + arrow keys
         #      [↑]
@@ -102,6 +102,11 @@ binds {
         bind = $mainMod_SHIFT, 9, movetoworkspace, 9
         bind = $mainMod_SHIFT, 0, movetoworkspace, 10
 
+        # Special Workspaces
+        bind = $mainMod_SHIFT, Space, togglespecialworkspace, minimize
+        bind = $mainMod_Alt, Space, movetoworkspacesilent, special:minimize
+        bind = $mainMod_SHIFT, N, togglespecialworkspace, network_social
+
 
         # Volume Control
         bind =  ,XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +2%; pkill -RTMIN+8 waybar
@@ -113,12 +118,3 @@ binds {
 
 }
 
-guestures {
-        gesture = 4, horizontal, workspace
-        gesture = 4, down, dispatcher, movetoworkspacesilent, special:minimize
-        gesture = 4, up, dispatcher, togglespecialworkspace, minimize
-        gesture = 3, up, move
-        gesture = 3, down, move
-        gesture = 3, left, move
-        gesture = 3, right, move
-}

@@ -1,30 +1,91 @@
-windowrulev2 = animation slide, class:^(wofi)$
+windowrule {
+  name = windowrule-1
+  animation = slide
+  no_shadow = on
+  match:class = ^(wofi)$
+}
+
 
 ############### wofi things #############
 
-windowrulev2 = noborder, class:^(wofi)$
-windowrulev2 = noshadow,class:^(wofi)$
-windowrulev2 = move 1315 70, class:^(wofi)$, title:^(clippick)$
+windowrule {
+  name = windowrule-2
+  border_size = 0
+  match:class = ^(wofi)
+}
+
+windowrule {
+  name = windowrule-3
+  move = (1315) (70)
+  match:class = ^(wofi)$
+  match:title = ^(clippick)$
+}
+
 
 ############# idk ################
-windowrulev2 = opacity 0.9 override 0.9 override, class:^(Google-chrome)$
-windowrulev2 = opacity 0.9 override 0.9 override, class:^(firefox)$
-windowrulev2 = tile, class:^(Chromium)$ initialTitle:^(twitch.tv_/)$
-windowrulev2 = tile, class:^(Chromium)$ initialTitle:^(web.whatsapp.com_/)$
-windowrulev2 = tile, initialTitle:^(Godot)$
-windowrulev2 = float, class:^(waypaper)$
-windowrulev2 = tile, class:^(aseprite.exe)$
+windowrule {
+  name = windowrule-4
+  opacity = 0.9 override 0.9 override
+  match:class = ^(Google-chrome)$
+}
+
+windowrule {
+  name = windowrule-5
+  opacity = 0.9 override 0.9 override
+  match:class = ^(firefox)$
+}
+
+windowrule {
+  name = windowrule-6
+  tile = on
+  match:class = ^(Chromium)$ initialTitle:^(twitch.tv_/)$
+}
+
+windowrule {
+  name = windowrule-7
+  tile = on
+  match:class = ^(Chromium)$ initialTitle:^(web.whatsapp.com_/)$
+}
+
+windowrule {
+  name = windowrule-8
+  tile = on
+  match:initial_title = ^(Godot)$
+}
+
+windowrule {
+  name = windowrule-9
+  float = on
+  match:class = ^(waypaper)$
+}
+
+windowrule {
+  name = windowrule-10
+  tile = on
+  match:class = ^(aseprite.exe)$
+}
+
 
 
 ############### mpv ######################
-windowrulev2 = opacity 1 override 1 override, class:^(mpv)$
-windowrulev2 = noblur, class:^(mpv)$
-windowrulev2 = nodim, class:^(mpv)$
+windowrule {
+  name = windowrule-11
+  opacity = 1 override 1 override
+  no_blur = on
+  no_dim = on
+  match:class = ^(mpv)$
+}
+
 
 ############### zathura ##############
-windowrulev2 = noblur, class:^(org.pwmt.zathura)$
-windowrulev2 = nodim, class:^(org.pwmt.zathura)$
-windowrulev2 = opacity 0.8 override 0.8 override, class:^(org.pwmt.zathura)$
+windowrule {
+  name = windowrule-12
+  no_blur = on
+  no_dim = off
+  opacity = 1 override 1 override
+  match:class = ^(org.pwmt.zathura)$
+}
+
 
 ################ my visual shit yeah foot ##################
 # windowrulev2 = noshadow,class:^(foot)$
@@ -39,13 +100,62 @@ windowrulev2 = opacity 0.8 override 0.8 override, class:^(org.pwmt.zathura)$
 # windowrulev2 = pin, class:^(foot)$
 
 ################### kitty ########################
-windowrulev2 = noshadow,class:^(kitty)$
-#windowrulev2 = noblur, class:^(kitty)$
-#windowrulev2 = nodim, class:^(kitty)$
-windowrulev2 = opacity 1.0 override 1.0 override, class:^(kitty)$
-
+windowrule{
+  name = windowrule-09
+  no_shadow = off
+  no_blur = off
+  no_dim = off
+  opacity = 1.0 override 1.0 override
+  match:class = ^(kitty)$
+}
 ################ some annoying shit ################
-windowrulev2 = noblur, class:^(Xdg-desktop-portal-gtk),title:^(Open Folder)
-windowrule = noblur,class:^()$,title:^()$
-windowrule = opacity 1.0 override 1.0 override, class:^()$,title:^()$
-windowrule = opacity 1.0 override 1.0 override, class:^(steam)$,title:^()$
+windowrule {
+  name = windowrule-13
+  no_blur = on
+  match:class = (Xdg-desktop-portal-gtk)
+  match:title = (Open Folder)
+}
+
+windowrule {
+  name = windowrule-14
+  opacity = 1.0 override 1.0 override
+  match:class = ^(Xdg-desktop-portal-gtk)
+  match:title = ^(Open Folder)
+}
+
+windowrule {
+  name = windowrule-15
+  float = on
+  match:class = ^(thunar)
+  match:title = ^(File Operation Progress)
+}
+
+windowrule {
+  name = windowrule-16
+  no_blur = on
+  opacity = 1.0 override 1.0 override
+  match:class = ^()$
+  match:title = ^()$
+}
+
+windowrule {
+  name = windowrule-17
+  opacity = 1.0 override 1.0 override
+  match:class = ^(steam)$
+  match:title = ^()$
+}
+
+windowrule {
+  name = windowrule-18
+  no_dim = on
+  match:class = ^(feh)$
+}
+
+windowrule {
+  name = windowrule-19
+  no_dim = on
+  no_blur = on
+  opacity = 1.0 override 1.0 override
+  match:initial_title = ^(_crx_kmfikkopdhmbdbkndkamabamlkkgkpod)$
+}
+

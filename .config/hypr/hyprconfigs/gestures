@@ -1,0 +1,26 @@
+gestures {
+
+        # Workspaces
+        gesture = 4, horizontal, workspace
+
+        #   Minimize
+        gesture = 4, down, dispatcher, movetoworkspacesilent, special:minimize
+        gesture = 4, up, dispatcher, togglespecialworkspace, minimize
+
+        # Resizing
+        gesture = 3, right, mod: SUPER, resize
+        gesture = 3, left, mod: SUPER, resize
+        gesture = 3, up, mod: SUPER, resize
+        gesture = 3, down, mod: SUPER, resize
+
+        # Moving
+        gesture = 4, left, mod: SUPER, dispatcher, movetoworkspace, e-1
+        gesture = 4, right, mod: SUPER, dispatcher, movetoworkspace, e+1
+        gesture = 3, up, move
+        gesture = 3, down, move
+        gesture = 3, left,  move
+        gesture = 3, right, move
+
+        # Zooming
+        gesture = 3, pinchin, mod: SUPER, dispatcher, hyprctl keyword cursor:zoom_factor $(hyprctl -j getoption cursor:zoom_factor | jq ".float + 0.5")
+}
