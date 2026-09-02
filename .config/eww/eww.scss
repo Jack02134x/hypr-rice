@@ -1,0 +1,28 @@
+.osd {
+  background: rgba(20, 20, 20, 0.92);
+  border-radius: 14px;
+  padding: 14px 18px;
+  color: #ffffff;
+}
+
+.osd-icon {
+  font-size: 28px;
+  min-width: 35px;
+}
+
+.osd-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #aaaaaa;
+}
+
+.osd-scale trough {
+  min-height: 6px;
+  border-radius: 10px;
+  background: #333333;
+}
+
+.osd-scale highlight {
+  border-radius: 10px;
+  background: #ffffff;
+}

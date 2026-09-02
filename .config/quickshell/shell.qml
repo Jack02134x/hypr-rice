@@ -12,6 +12,7 @@ ShellRoot {
     property string query: ""
     property var applicationEntries: []
     property string wallpaperDirectory: "/home/jack/wallpapers/static_unsorted_wallpapers"
+    property string livewallpaperDirectory: "/home/jack/wallpapers/VideoWallpapers"
     property var wallpapers: []
     property bool wallpaperPickerActive: false
     property string launcherMode: {
@@ -30,6 +31,8 @@ ShellRoot {
     property string calculation: launcherMode === "calculate"
         ? calculate(query.slice(1).trim()) : ""
     property var filteredWallpapers: launcherMode === "wallpaper"
+        ? wallpapers.filter(path => wallpaperFileName(path).toLowerCase().includes(query.slice(1).trim().toLowerCase())) : []
+    property var filteredLiveWallpapers: launcherMode === "livewallpaper"
         ? wallpapers.filter(path => wallpaperFileName(path).toLowerCase().includes(query.slice(1).trim().toLowerCase())) : []
 
     Style {
@@ -142,15 +145,6 @@ ShellRoot {
             : (start + direction + wallpaperGrid.count) % wallpaperGrid.count
         wallpaperGrid.currentIndex = index
         wallpaperGrid.positionViewAtIndex(index, GridView.Contain)
-    }
-
-    function selectFirstWallpaper() {
-        if (wallpaperGrid.count > 0) {
-            wallpaperGrid.currentIndex = 0
-            wallpaperGrid.positionViewAtIndex(0, GridView.Beginning)
-        } else {
-            wallpaperGrid.currentIndex = -1
-        }
     }
 
     function calculate(expression) {

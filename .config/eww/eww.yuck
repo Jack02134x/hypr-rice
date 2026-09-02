@@ -1,0 +1,46 @@
+(defvar osd_type "volume")
+(defvar osd_value "50")
+(defvar osd_icon "󰕾")
+
+(defwindow osd
+  :monitor 0
+  :geometry (geometry
+    :anchor "top center"
+    :width "300px"
+    :height "70px"
+    :x "0px"
+    :y "40px"
+  )
+  :stacking "fg"
+  :exclusive false
+  :focusable false
+
+  (box
+    :class "osd"
+    :orientation "h"
+    :spacing 15
+
+    (label
+      :class "osd-icon"
+      :text osd_icon)
+
+    (box
+      :orientation "v"
+      :hexpand true
+      :spacing 5
+
+      (label
+        :class "osd-label"
+        :text osd_type)
+
+      (scale
+        :class "osd-scale"
+        :value {osd_value}
+        :min 0
+        :max 100
+        :draw_value false
+        :hexpand true
+      )
+    )
+  )
+)
