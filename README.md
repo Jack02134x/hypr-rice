@@ -52,4 +52,4 @@ everything is meant to be easy to edit/rip apart, colors, bar modules, animation
 
 ---
 
-<sub>not that deep but if you end up using this rice, a small mention/credit would be nice :)</sub>
+<sub>not that deep but if you end up using this rice, a small mention/credit would be nice :3</sub>
