@@ -1,7 +1,8 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "source": "/home/jack/.config/fastfetch/pngs/jack.png",
+	"type": "file",
+    "source": "/home/jack/.config/fastfetch/ascii-arts/jack.txt",
     "height": 20
   },
   "display": {
