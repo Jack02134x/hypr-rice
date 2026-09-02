@@ -1,48 +1,49 @@
 #!/bin/bash
-#  __  __                  _        
-# |  \/  | _____   _____  | |_ ___  
-# | |\/| |/ _ \ \ / / _ \ | __/ _ \ 
-# | |  | | (_) \ V /  __/ | || (_) |
-# |_|  |_|\___/ \_/ \___|  \__\___/ 
-#                                  
 
-# Function to log messages (useful for debugging)
-log_message() {
-    # echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> ~/moveto_log.txt
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
-}
+# Move all windows from the active workspace to another workspace
+# Usage: move_workspace.sh <target_workspace>
 
-# Get the target workspace from the argument
-target_workspace=$1
+target_ws="$1"
 
-# Check if a target workspace was provided
-if [ -z "$target_workspace" ]; then
-    log_message "Error: No target workspace provided"
+if [[ -z "$target_ws" ]]; then
+    echo "Usage: $0 <target_workspace>"
     exit 1
 fi
 
-# Get the current active workspace
-current_workspace=$(hyprctl activewindow -j | jq '.workspace.id')
+# Current workspace of focused window
+current_ws=$(hyprctl activewindow -j | jq -r '.workspace.id')
 
-if [ -z "$current_workspace" ]; then
-    log_message "Error: Couldn't determine current workspace"
+if [[ -z "$current_ws" || "$current_ws" == "null" ]]; then
+    echo "Could not determine active workspace"
     exit 1
 fi
 
-log_message "Moving from workspace $current_workspace to $target_workspace"
+echo "Moving windows from workspace $current_ws to workspace $target_ws"
 
-# Get all window addresses in the current workspace
-window_addresses=$(hyprctl clients -j | jq -r ".[] | select(.workspace.id == $current_workspace) | .address")
+# Get addresses of all windows on current workspace
+hyprctl clients -j |
+jq -r ".[] | select(.workspace.id == $current_ws) | .address" |
+while read -r addr; do
 
-# Move each window to the target workspace
-for address in $window_addresses; do
-    log_message "Moving window $address to workspace $target_workspace"
-    hyprctl dispatch movetoworkspacesilent "$target_workspace,address:$address"
+    echo "Moving $addr"
+
+    # Focus window by address
+    hyprctl dispatch "
+        hl.dsp.focus({
+            window = 'address:$addr'
+        })
+    " >/dev/null
+
+    # Move focused window
+    hyprctl dispatch "
+        hl.dsp.window.move({
+            workspace = '$target_ws',
+            follow = false
+        })
+    " >/dev/null
+
 done
 
-log_message "Finished moving windows"
+echo "Done"
 
-# Switch to the target workspace
-hyprctl dispatch workspace "$target_workspace"
-
-log_message "Switched to workspace $target_workspace"
+hyprctl dispatch "hl.dsp.focus({ workspace = '$target_ws' })"

@@ -1,4 +1,6 @@
-#! /bin/sh
+#! /bin/bash
+
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 
 bar="▁▂▃▄▅▆▇█"
 dict="s/;//g;"
@@ -17,6 +19,9 @@ echo "
 [general]
 bars = 18
 
+[input]
+method = pipewire
+
 [output]
 method = raw
 raw_target = /dev/stdout
@@ -26,5 +31,5 @@ ascii_max_range = 7
 
 # read stdout from cava
 cava -p $config_file | while read -r line; do
-    echo $line | sed $dict
+    echo "$line" | sed "$dict"
 done

@@ -82,7 +82,7 @@
       "empty": "",
     },
     "persistent-workspaces": {
-      "eDP-1": [1, 2, 3, 4, 5],
+      "HDMI-A-1": [1, 2, 3, 4, 5],
     },
   },
   "battery": {
@@ -125,28 +125,12 @@
     "on-click": "pavucontrol",
   },
 
-  "cava": {
-    "on-click": "pkill python; pkill mpv;  python /home/jack/.config/hypr/wallpaperslideshow.py & python /home/jack/python-yt-project/play_entire_playlist.py",
-    "on-click-right": "pkill python ; pkill mpv; python /home/jack/.config/hypr/wallpaperslideshow.py &",
-    "cava_config": "$HOME/.config/cava/config",
-    "framerate": 60,
-    "autosens": 1,
-    "sensitivity": 4.5,
-    "bars": 25,
-    "lower_cutoff_freq": 100,
-    "higher_cutoff_freq": 10000,
-    "method": "pulse",
-    "source": "auto",
-    "stereo": false,
-    "reverse": false,
-    "bar_delimiter": 0,
-    "monstercat": true,
-    "waves": false,
-    "noise_reduction": 0.3,
-    "input_delay": 1,
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    "actions": {},
-  },
+  
+    "custom/cava": {
+        "format": "{}",
+        "exec": "/home/jack/.config/waybar/scripts/cava.sh`"
+    },
+
   "custom/gpucputemps": {
     "interval": 2,
     "return-type": "json",

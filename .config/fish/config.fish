@@ -10,7 +10,7 @@ alias ls='ls'
 alias grep='grep --color=auto'
 alias pyon="source ~/pyenv/bin/activate.fish; python"
 alias pipon="source ~/pyenv/bin/activate.fish; pip"
-alias h="hyprland"
+alias h="start-hyprland"
 alias pw="startplasma-wayland"
 alias px="startx"
 alias ..="cd .."

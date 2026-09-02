@@ -11,7 +11,7 @@ hyprctl setcursor "miku-cursor-linux" 32
 # wallpaper
 # hyprpaper &
 #awww-daemon &
-#skwd-daemon &
+skwd-daemon &
 # python /home/jack/.config/hypr/wallpaperslideshow.py &
 # swaybg -i ~/.config/hellpaper/wall &
 # quickshell &

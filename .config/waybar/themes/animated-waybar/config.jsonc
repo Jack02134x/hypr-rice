@@ -340,7 +340,7 @@
     "exec-if": "ping wttr.in -c1",
     "tooltip": true,
   },
-  "custom/colorpicker": {
+  "custom": {
     "format": "{}",
     "return-type": "json",
     "interval": "once",
